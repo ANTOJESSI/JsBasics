@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: black;
+        width: 100px;
+        height: 100px;
+      }
+      .afterstyle {
+        width: 500px;
+        height: 500px;
+        transition: 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="black"></div>
+    <button onclick="change()">Change the Color</button>
+    <script>
+      //Select the Box
+      var box = document.getElementById("black");
+
+      function change() {
+        box.style.backgroundColor = "green";
+        box.setAttribute("class", "afterstyle");
+      }
+    </script>
+  </body>
+</html>

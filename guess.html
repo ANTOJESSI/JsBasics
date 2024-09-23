@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Challenge</title>
+</head>
+<body>
+    <h1>Guess the Random Number</h1>
+    <input type="number" id="num">
+    <button onclick="check()">Check</button>
+    <p id="result">You are right/wrong.</p>
+    <p id="mark">Score: 10</p>
+    <script>
+        var a=document.getElementById("num");
+        var res=document.getElementById("result");
+        var randomnumber=Math.floor(Math.random()*10)+1;
+        var total=document.getElementById("mark");
+        var score=10;
+        function check()
+        {
+            console.log(randomnumber);
+            var guessnumber=Number(a.value);
+            if(guessnumber==randomnumber){
+                res.textContent="You are Right";
+                alert("Congratulations!!! \n You Won !!!")
+                total.textContent="Score: "+score;
+            }
+            else{
+                res.textContent="You are Wrong";
+                score=score-1;
+                total.textContent="Score: "+score;
+            }
+        }
+    </script>
+
+
+    <!-- <p id="para">Hello</p>
+    <script>
+        var c=document.getElementById("para");
+        console.log(c.textContent);
+        c.textContent="Bye";
+        console.log(c.textContent);
+    </script> -->
+
+
+    <!-- <input id="num1" value="40">
+    <input id="num2" value="30">
+    <button onclick="change()">Add</button>
+    <p id="result">Result:</p>
+    <script>
+        var a=document.getElementById("num1");
+        var aa=Number(a.value);
+        var b=document.getElementById("num2");
+        var bb=Number(b.value);
+        var c=aa+bb;
+        var result=document.getElementById("result");
+        function change(){
+            result.textContent=c;
+        }
+        console.log(c);
+    </script> -->
+
+
+<!-- Add 2 numbers  -->
+    <!-- <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="change()">Add</button>
+    <p id="result">Result</p>
+    <script>
+        var n1=document.getElementById("num1");
+        var n2=document.getElementById("num2");
+        var total=document.getElementById("result");
+        function change(){
+            var number1=Number(n1.value);
+            var number2=Number(n2.value);
+            var tot=number1+number2;
+            total.textContent=tot;
+        }
+    </script> -->
+
+
+    <!-- <script>
+        var a=Math.random();
+        console.log(a);
+        document.write(a*100);
+        var b=Math.floor(34.90)
+        document.write("\n",b);
+    </script> -->
+</body>
+</html>

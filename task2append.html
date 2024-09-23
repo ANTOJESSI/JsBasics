@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="update()">ADD-Append</button>
+    <div id="result"></div>
+    <script>
+      var a = document.getElementById("result");
+      function update() {
+        var listitem = document.createElement("h1");
+        listitem.textContent = "Hello";
+        a.append(listitem);
+      }
+    </script>
+  </body>
+</html>
